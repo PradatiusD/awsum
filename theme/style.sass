@@ -13,8 +13,45 @@
  * Use it to make something cool, have fun, and share what you've learned with others.
  */
 
-$headings-font-family: "Montserrat"
+
+// Global variables
+$seedsGreen: #009245
+$seedsTeal:  #20858A
+
+// Bootstrap Modifications
+
+$font-family-sans-serif: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+$headings-font-family: "Montserrat", $font-family-sans-serif
+$headings-font-weight: 400
+$headings-color: $seedsGreen
+
+$text-color: darken($seedsGreen, 20%)
+$font-size-base: 17px
+
+$navbar-height: 65px
+$navbar-inverse-bg: $seedsGreen
+$navbar-inverse-color:      lighten($seedsGreen, 70%)
+$navbar-inverse-link-color: lighten($seedsGreen, 70%)
+$navbar-inverse-border:     darken($seedsGreen, 10%)
+
+
+$border-radius-base:  0
+$border-radius-large: 0
+$border-radius-small: 0
+
+$link-color: $seedsTeal
 
 @import "../bower_components/bootstrap-sass/lib/bootstrap"
 @import "../bower_components/sass-mediaqueries/media-queries"
 @import "../bower_components/bourbon/dist/bourbon"
+
+h4, h5, h6
+	font-weight: 700
+
+body
+	background: url(img/green_maze.png)
+
+.container.main
+	background: white
+	padding: 2em
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.54)

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-  <div class="container">
+  <div class="container main">
     <div class="row">
 
       <main class="col-md-9">
