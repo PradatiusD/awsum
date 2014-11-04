@@ -12,7 +12,7 @@ module.exports = function(grunt) {
         livereload: true
       },
       copy: {
-        files: ['theme/*'],
+        files: ['theme/*', '!'+sassFile],
         tasks: ['copy']
       },
       sass: {
@@ -35,13 +35,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    // uglify: {
-    //   homePgDep: {
-    //     files: {
-    //       'theme/lib/homepage-dependencies.min.js': [assets.lib.js]
-    //     }
-    //   }
-    // },
     'ftp-deploy': {
       build: {
         auth: {

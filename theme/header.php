@@ -11,11 +11,11 @@
     <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
-      <nav class="navbar navbar-inverse" role="navigation">
+      <nav class="navbar navbar-inverse main-menu" role="navigation">
         <header class="container">
 
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -33,7 +33,7 @@
                 'depth'             => 2,
                 'container'         => 'div',
                 'container_class'   => 'collapse navbar-collapse',
-                'container_id'      => 'bs-example-navbar-collapse-1',
+                'container_id'      => 'main-nav-collapse',
                 'menu_class'        => 'nav navbar-nav',
                 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                 'walker'            => new wp_bootstrap_navwalker())
