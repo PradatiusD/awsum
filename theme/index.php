@@ -15,8 +15,8 @@
 
             <?php
               // If blog home
-              if (is_home() || is_category()): ?>
-                <div class="row">
+              if (is_post_type_archive()): ?>
+                <article class="row">
 
                   <?php if (has_post_thumbnail()): ?>
 
@@ -25,23 +25,17 @@
                         <?php the_post_thumbnail('thumbnail', array('class'=>'img-responsive')); ?>
                       </a>
                     </div>
-                    
                     <div class="col-md-9">
-                      <?php the_excerpt(); ?>
-                    </div>
-
                   <?php else:?>
-
                     <div class="col-md-12">
+                  <?php endif; ?>
                       <?php the_excerpt(); ?>
                     </div>
-
-                  <?php endif; ?>
-                </div>
+                </article>
               <?php
               else:
-                if (get_post_type() == 'interview' && is_single()) {
-                  include('interviews.php');
+                if (get_post_type() == 'team-member') {
+                  get_template_part('team-member');
                 } else {
                   the_content('Read more...');
                 }

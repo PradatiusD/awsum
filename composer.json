@@ -1,0 +1,15 @@
+{
+    "name": "PradaDesigners/seeds",
+    "require": {
+        "electrolinux/phpquery": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "PradatiusD",
+            "email": "danielprada2012@gmail.com"
+        }
+    ],
+    "config": {
+        "vendor-dir": "theme/lib"
+    }
+}
