@@ -60,3 +60,14 @@ function footer_scripts() {
   wp_enqueue_script('bootstrapJS','https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js',array('jquery'), '3.2.0', true);
 }
 add_action( 'wp_enqueue_scripts', 'footer_scripts');
+
+
+// Twitter Scripts for Team Members
+function twitter_scripts() {
+  if (is_singular('team-member')) {
+    wp_enqueue_script('angular','//ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js',array('jquery'), '3.2.0', true);
+    wp_enqueue_script('angular-sanitize','//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-sanitize.min.js', array('angular'), '1.3.3', true);
+    wp_enqueue_script('twitter-angular', get_stylesheet_directory_uri().'/js/twitter.js',array('angular', 'jquery'), '1.0.0', true);
+  }
+}
+add_action( 'wp_enqueue_scripts', 'twitter_scripts');

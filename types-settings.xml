@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<types>
+    <settings>
+        <add_resized_images_to_library>0</add_resized_images_to_library>
+        <register_translations_on_import>1</register_translations_on_import>
+        <images_remote>0</images_remote>
+        <images_remote_cache_time>36</images_remote_cache_time>
+        <help_box>by_types</help_box>
+    </settings>
+    <groups>
+        <group>
+            <ID>9</ID>
+            <post_content>Custom Fields for Team member CPT</post_content>
+            <post_title>Team Member Custom Fields</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+                <_wp_types_group_post_types>,team-member,</_wp_types_group_post_types>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_admin_styles></_wp_types_group_admin_styles>
+                <_wp_types_group_templates>all</_wp_types_group_templates>
+                <_wpcf_conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </_wpcf_conditional_display>
+                <_wp_types_group_fields>,official-title,twitter,linkedin-public-url,google-scholar-link,research-gate,</_wp_types_group_fields>
+            </meta>
+            <hash>0bef1950e485d8e70439f284a89b4d9c</hash>
+            <checksum>0bef1950e485d8e70439f284a89b4d9c</checksum>
+            <__types_id>team-member-custom-fields</__types_id>
+            <__types_title>Team Member Custom Fields</__types_title>
+        </group>
+    </groups>
+    <fields>
+        <field>
+            <id>official-title</id>
+            <slug>official-title</slug>
+            <type>textfield</type>
+            <name>Official Title</name>
+            <description>Official title that you would display on a business card.  (example: Associate Professor in the School of Sustainable Engineering and the Built Environment)</description>
+            <data>
+                <repetitive>0</repetitive>
+                <validate>
+                    <required>
+                        <active>1</active>
+                        <value>true</value>
+                        <message>This field is required</message>
+                    </required>
+                </validate>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-official-title</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>official-title</__types_id>
+            <__types_title>Official Title</__types_title>
+            <hash>89e1929bcd4be3edcdb96fde2f0dfb3c</hash>
+            <checksum>89e1929bcd4be3edcdb96fde2f0dfb3c</checksum>
+        </field>
+        <field>
+            <id>twitter</id>
+            <slug>twitter</slug>
+            <type>textfield</type>
+            <name>Twitter Handle</name>
+            <description>[Optional] Please add the twitter handle (example pradadesigners)</description>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-twitter</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>twitter</__types_id>
+            <__types_title>Twitter Handle</__types_title>
+            <hash>30064a447988fee9462bc1c2a5847f21</hash>
+            <checksum>30064a447988fee9462bc1c2a5847f21</checksum>
+        </field>
+        <field>
+            <id>linkedin-public-url</id>
+            <slug>linkedin-public-url</slug>
+            <type>url</type>
+            <name>Linkedin Public URL</name>
+            <description>[Optional]  Please add the public LinkedIn URL.  For an example on how to find it, go to http://note.io/10tgTHg</description>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-linkedin-public-url</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>linkedin-public-url</__types_id>
+            <__types_title>Linkedin Public URL</__types_title>
+            <hash>126ac676e4e1bdb216df16e8935c5824</hash>
+            <checksum>126ac676e4e1bdb216df16e8935c5824</checksum>
+        </field>
+        <field>
+            <id>google-scholar-link</id>
+            <slug>google-scholar-link</slug>
+            <type>url</type>
+            <name>Google Scholar Link</name>
+            <description>[Optional] Link to Google Scholar profile.   An example of one is here http://note.io/1xdYATA</description>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-google-scholar-link</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>google-scholar-link</__types_id>
+            <__types_title>Google Scholar Link</__types_title>
+            <hash>3567d68e49b06fc2b4f3f52a2b739afb</hash>
+            <checksum>3567d68e49b06fc2b4f3f52a2b739afb</checksum>
+        </field>
+        <field>
+            <id>research-gate</id>
+            <slug>research-gate</slug>
+            <type>url</type>
+            <name>Research Gate Profile</name>
+            <description>[Optional] The URL for the Research Gate profile of this team member (ex http://www.researchgate.net/profile/Ben_Wender)</description>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-research-gate</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>research-gate</__types_id>
+            <__types_title>Research Gate Profile</__types_title>
+            <hash>9d26f85408e90e06015fe018cff504a3</hash>
+            <checksum>9d26f85408e90e06015fe018cff504a3</checksum>
+        </field>
+    </fields>
+    <types>
+        <type>
+            <labels>
+                <name>Team Members</name>
+                <singular_name>Team Member</singular_name>
+                <add_new>Add New</add_new>
+                <add_new_item>Add New %s</add_new_item>
+                <edit_item>Edit %s</edit_item>
+                <new_item>New %s</new_item>
+                <view_item>View %s</view_item>
+                <search_items>Search %s</search_items>
+                <not_found>No %s found</not_found>
+                <not_found_in_trash>No %s found in Trash</not_found_in_trash>
+                <parent_item_colon>Parent text</parent_item_colon>
+                <all_items>All items</all_items>
+            </labels>
+            <slug>team-member</slug>
+            <description></description>
+            <icon>smiley</icon>
+            <public>public</public>
+            <menu_position></menu_position>
+            <menu_icon></menu_icon>
+            <supports>
+                <title>1</title>
+                <editor>1</editor>
+                <thumbnail>1</thumbnail>
+            </supports>
+            <rewrite>
+                <enabled>1</enabled>
+                <custom>normal</custom>
+                <slug></slug>
+                <with_front>1</with_front>
+                <feeds>1</feeds>
+                <pages>1</pages>
+            </rewrite>
+            <has_archive>1</has_archive>
+            <show_in_menu>1</show_in_menu>
+            <show_in_menu_page></show_in_menu_page>
+            <show_ui>1</show_ui>
+            <publicly_queryable>1</publicly_queryable>
+            <can_export>1</can_export>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <permalink_epmask>EP_PERMALINK</permalink_epmask>
+            <wpcf-post-type></wpcf-post-type>
+            <taxonomies>
+                <education>1</education>
+            </taxonomies>
+            <id>team-member</id>
+            <__types_id>team-member</__types_id>
+            <__types_title>Team Members</__types_title>
+            <hash>1c04b430a8d08702178cfb844dc4debb</hash>
+            <checksum>1c04b430a8d08702178cfb844dc4debb</checksum>
+        </type>
+    </types>
+    <taxonomies>
+        <taxonomy>
+            <wpcf-tax>education</wpcf-tax>
+            <labels>
+                <name>Educational Levels</name>
+                <singular_name>Educational Level</singular_name>
+                <search_items>Search %s</search_items>
+                <popular_items>Popular %s</popular_items>
+                <all_items>All %s</all_items>
+                <parent_item>Parent %s</parent_item>
+                <parent_item_colon>Parent %s:</parent_item_colon>
+                <edit_item>Edit %s</edit_item>
+                <update_item>Update %s</update_item>
+                <add_new_item>Add New %s</add_new_item>
+                <new_item_name>New %s Name</new_item_name>
+                <separate_items_with_commas>Separate %s with commas</separate_items_with_commas>
+                <add_or_remove_items>Add or remove %s</add_or_remove_items>
+                <choose_from_most_used>Choose from the most used %s</choose_from_most_used>
+                <menu_name>%s</menu_name>
+            </labels>
+            <slug>education</slug>
+            <description>Educational Level of the team member.</description>
+            <public>public</public>
+            <supports>
+                <team-member>1</team-member>
+            </supports>
+            <hierarchical>hierarchical</hierarchical>
+            <rewrite>
+                <enabled>1</enabled>
+                <slug></slug>
+                <with_front>1</with_front>
+                <hierarchical>1</hierarchical>
+            </rewrite>
+            <show_ui>1</show_ui>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <show_tagcloud>1</show_tagcloud>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <update_count_callback></update_count_callback>
+            <id>education</id>
+            <__types_id>education</__types_id>
+            <__types_title>Educational Levels</__types_title>
+            <checksum>9278980d046da0d749c8b2318bfa9440</checksum>
+        </taxonomy>
+    </taxonomies>
+</types>

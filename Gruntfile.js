@@ -12,7 +12,7 @@ module.exports = function(grunt) {
         livereload: true
       },
       copy: {
-        files: ['theme/*', '!'+sassFile],
+        files: ['theme/**', '!'+sassFile],
         tasks: ['copy']
       },
       sass: {
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
         },
         src: 'theme',
         dest: pckg.name,
-        exclusions: ['theme/lib','img']
+       exclusions: ['theme/lib','img']
       }
     }
   });

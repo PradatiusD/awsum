@@ -1,7 +1,8 @@
 {
     "name": "PradaDesigners/seeds",
     "require": {
-        "electrolinux/phpquery": "dev-master"
+        "electrolinux/phpquery": "dev-master",
+        "ricardoper/twitteroauth": "1.*"
     },
     "authors": [
         {

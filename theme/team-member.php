@@ -24,7 +24,7 @@
     <div>
       <a href="<?php echo 'http://twitter.com/'.$twitterHandle;?>" target="_blank">
         <i class="fa fa-twitter"></i>
-        <?php echo $twitterHandle; ?>
+        @<?php echo $twitterHandle; ?>
       </a>
     </div>  
   <?php endif;?>
@@ -44,5 +44,4 @@
   if (strlen($googleScholarLink) > 0 ) {
     get_template_part('google-scholar');     
   }
-
 ?>
