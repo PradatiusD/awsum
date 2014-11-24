@@ -16,3 +16,18 @@ Team Members Post Type:
 
 # Ideas
 Beautiful picture by [tsaiproject](https://www.flickr.com/photos/tsaiproject/7805788840)
+
+# Members it involves
+
+- Kaitlin Vortherms
+- Johnny Thomas
+- Daniel Eisenberg
+- Marcus Snell
+- Camilla Jensen
+- Margaret Hinrichs (Brooks)
+- Dwarak Triplican
+- Valentina Prado
+- Susan Spierre
+- Andrew Berardy
+- Payson Seager
+- Ben Wender

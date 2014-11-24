@@ -44,7 +44,7 @@ module.exports = function(grunt) {
         },
         src: 'theme',
         dest: pckg.name,
-        exclusions: ['theme/lib']
+        exclusions: ['theme/lib','img']
       }
     }
   });
