@@ -29,7 +29,7 @@ angular.module('twitterFilters', ['ngSanitize'])
 
 // Move to top of sidebar
 
-angular.module('seeds',['ngSanitize','twitterFilters'])
+angular.module('awsum',['ngSanitize','twitterFilters'])
   .controller('TwitterController',['$scope', '$filter', function($scope, $filter){
     $scope.statuses = teamMemberJSON;
 

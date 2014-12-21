@@ -1,5 +1,5 @@
 {
-  "name": "seeds",
+  "name": "awsum",
   "version": "1.0.0",
   "description": "",
   "main": "Gruntfile.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/PradatiusD/seeds.git"
+    "url": "https://github.com/PradatiusD/awsum.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PradatiusD/seeds/issues"
+    "url": "https://github.com/PradatiusD/awsum/issues"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
@@ -23,5 +23,5 @@
     "grunt-contrib-watch": "~0.6.1",
     "grunt-ftp-deploy": "^0.1.7"
   },
-  "homepage": "https://github.com/PradatiusD/seeds"
+  "homepage": "https://github.com/PradatiusD/awsum"
 }

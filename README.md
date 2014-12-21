@@ -1,4 +1,4 @@
-![SEEDS logo](theme/img/seeds-logo-green.png)
+![awsum logo](theme/img/awe-logo.png)
 # Awsum Studio
 
 ## About

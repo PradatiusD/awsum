@@ -27,14 +27,14 @@
       var teamMemberJSON = <?php echo $response;?>;
     </script>
 
-    <div ng-app="seeds">
+    <div ng-app="awsum">
 
       <div ng-controller="TwitterController" class="twitterFeed" id="twitterFeed">
 
-        <h4>Follow <a href="https://twitter.com/<?php echo $twitterHandle;?>"><?php echo $twitterHandle;?></a></h4>
         <hr>
+        <h4>Follow <a href="https://twitter.com/<?php echo $twitterHandle;?>"><?php echo $twitterHandle;?></a></h4>
 
-        <article ng-repeat="status in statuses">
+        <article ng-repeat="status in statuses" class="tweet">
 
           <section class="row">
             <aside class="col-xs-2">

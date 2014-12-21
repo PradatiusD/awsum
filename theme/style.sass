@@ -1,15 +1,15 @@
 /*
- * Theme Name: Carolina Prada Child Theme
- * Theme URI: http://github.com/PradatiusD/cprada/ 
+ * Theme Name: awsum studio
+ * Theme URI: http://github.com/PradatiusD/awsum/ 
  * Author: https://github.com/PradatiusD/
  * Author URI: http://pradadesigners.com
- * Description: Genesis Child Theme Theme for Carolina Prada
+ * Description: Genesis Child Theme Theme for awsum studio
  * Version: 1.0
  * Template: genesis  
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Tags: Photos, white, one-column, two-columns, three-columns, left-sidebar, right-sidebar, responsive-layout, custom-menu, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
- * Text Domain: cprada
+ * Text Domain: awsum
  * This theme, like WordPress, is licensed under the GPL.
  * Use it to make something cool, have fun, and share what you've learned with others.
  */
@@ -22,8 +22,9 @@ $whiteGray: #F5F5F5
 
 $body-bg: $whiteGray
 
-$font-family-sans-serif: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif
 $headings-font-weight: 400
+$font-family-serif: "Merriweather", Georgia, "Times New Roman", Times, serif !default
+$font-family-base: $font-family-serif
 
 $font-size-base: 18px
 $text-color: #333
@@ -201,3 +202,30 @@ article
 	@extend .text-center
 	background: #FFF
 	padding: 1em 0em 0.5em 0
+
+/* Styling header */
+.title-area
+	text-align: center
+
+/* Team Member */
+
+.single-team-member, .post-type-archive-team-member
+	.entry-meta
+		display: none
+	
+	.tweet
+		padding: 0
+		background: inherit
+		font-size: 0.9em
+
+/* Logo */
+.site-title a
+	background: url("img/awe-logo.png")
+	background-repeat: no-repeat
+	background-size: auto 100%
+	background-position: center
+	height: 150px
+	display: block
+
+.title-area
+	text-indent: -9999px
