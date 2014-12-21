@@ -113,7 +113,7 @@ function team_member_pic() {
     </div>  
     <?php endif;?>
 
-  <?php if (strlen($linkedInUrl)): ?>
+  <?php if (strlen($linkedInUrl) > 0): ?>
       <div>
         <a href="<?php echo $linkedInUrl;?>" target="_blank">
           <i class="fa fa-linkedin"></i>
