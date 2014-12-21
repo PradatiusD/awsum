@@ -1,65 +1,49 @@
 <?php
 
+//* Start the engine
+include_once( get_template_directory() . '/lib/init.php' );
+//* Child theme (do not remove)
+define( 'CHILD_THEME_NAME', 'awsum Studio Child Theme' );
+define( 'CHILD_THEME_URL', 'http://github.com/PradatiusD/awsum' );
+define( 'CHILD_THEME_VERSION', '1.0.0' );
+
+
+//* Add HTML5 markup structure
+add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
+//* Add viewport meta tag for mobile browsers
+add_theme_support( 'genesis-responsive-viewport' );
+//* Add support for custom background
+add_theme_support( 'custom-background' );
+//* Add support for 3-column footer widgets
+add_theme_support( 'genesis-footer-widgets', 3 );
+
 if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
   // For Debugging on Localhost
   error_reporting(E_ALL);
   ini_set('display_errors', 1);
   
   // For live reloading
-
   function local_livereload(){
     wp_register_script('livereload', 'http://localhost:35729/livereload.js', null, false, true);
     wp_enqueue_script('livereload');    
   }
   add_action( 'wp_enqueue_scripts', 'local_livereload');
 }
+// move Secondary Sidebar to .content-sidebar-wrap
+remove_action('genesis_after_content_sidebar_wrap','genesis_get_sidebar_alt');
+add_action('genesis_after_content','genesis_get_sidebar_alt' );
+// $hook_name = 'genesis_after_content_sidebar_wrap';
+// global $wp_filter;
+// var_dump( $wp_filter[$hook_name] );
 
-// Register Custom Navigation Walker
-require_once('wp_bootstrap_navwalker.php');
-
-register_nav_menus( array(
-	'primary' => __( 'Primary Menu', 'ISSST' ),
-));
-
-
-// Register our sidebars and widgetized areas.
-
-function add_widgets() {
-  register_sidebar( array(
-    'name' => 'Right Sidebar',
-    'id' => 'right_sidebar',
-    'before_widget' => '<article>',
-    'after_widget' =>  '</article>',
-    'before_title' =>  '<h3>',
-    'after_title' =>   '</h3>',
-  ) );
-
-  register_sidebar( array(
-    'name' => 'Footer Area',
-    'id' => 'footer_widgets',
-    'before_widget' => '<article class="col-md-3">',
-    'after_widget' =>  '</article>',
-    'before_title' =>  '<h3>',
-    'after_title' =>   '</h3>',
-  ) );
-}
-add_action( 'widgets_init', 'add_widgets' );
 
 
 // Header Scripts
 function header_scripts () {
-  wp_enqueue_script('jquery');
-  wp_enqueue_style('theme-style', get_stylesheet_uri());
   wp_enqueue_style('custom_fonts', '//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Montserrat:400,700', array(), '1.0');
   wp_enqueue_style('fontawesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css', array(), '4.0.3');
 }
 add_action('wp_enqueue_scripts','header_scripts');
-
-// Footer Scripts
-function footer_scripts() {
-  wp_enqueue_script('bootstrapJS','https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js',array('jquery'), '3.2.0', true);
-}
-add_action( 'wp_enqueue_scripts', 'footer_scripts');
 
 
 // Twitter Scripts for Team Members

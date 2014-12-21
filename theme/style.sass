@@ -1,182 +1,203 @@
 /*
- * Theme Name: SEEDS
- * Theme URI: https://github.com/PradatiusD/seeds
+ * Theme Name: Carolina Prada Child Theme
+ * Theme URI: http://github.com/PradatiusD/cprada/ 
  * Author: https://github.com/PradatiusD/
  * Author URI: http://pradadesigners.com
- * Description: Theme for SEEDS studio
+ * Description: Genesis Child Theme Theme for Carolina Prada
  * Version: 1.0
- * License: GNU General Public License v2 or later
+ * Template: genesis  
+ * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
- * Tags: clarivoyant, bootstrap
- * Text Domain: alainpupo
+ * Tags: Photos, white, one-column, two-columns, three-columns, left-sidebar, right-sidebar, responsive-layout, custom-menu, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+ * Text Domain: cprada
  * This theme, like WordPress, is licensed under the GPL.
  * Use it to make something cool, have fun, and share what you've learned with others.
  */
 
+// Colors
+$cPradaRed: #D72020
+$cPradaBlack: #333
+$whiteGray: #F5F5F5
 
-// Global variables
-$seedsGreen: #009245
-$seedsWhiteGreen: lighten($seedsGreen, 70%)
-$seedsDarkGreen:  darken($seedsGreen,  10%)
-$seedsTeal: #20858A
-$seedsPurple:  #9090D1
 
-// Bootstrap Modifications
+$body-bg: $whiteGray
 
-$font-family-sans-serif: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
-$headings-font-family: "Montserrat", $font-family-sans-serif
+$font-family-sans-serif: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif
 $headings-font-weight: 400
-$headings-color: $seedsGreen
 
+$font-size-base: 18px
+$text-color: #333
+$link-color: $cPradaRed
 
-$text-color: darken($seedsGreen, 20%)
-$link-color: $seedsPurple
-$font-size-base: 17px
+$font-size-h1: floor($font-size-base * 2)
+$font-size-h2: floor($font-size-base * 1.50)
+$font-size-h3: ceil($font-size-base * 1.25)
+$font-size-h4: ceil($font-size-base * 1.12)
+$font-size-h5: $font-size-base
+$font-size-h6: ceil($font-size-base * 0.85)
 
-
-$navbar-height: 75px
-$navbar-inverse-bg:             $seedsGreen
-$navbar-inverse-color:          $seedsWhiteGreen
-$navbar-inverse-link-color:     $seedsWhiteGreen
-$navbar-inverse-border:         $seedsDarkGreen
-$navbar-inverse-link-active-bg: rgba($seedsGreen, 0.5)
-$navbar-inverse-link-hover-bg:  rgba($seedsTeal, 0.66)
-
-$navbar-inverse-toggle-hover-bg:            $seedsDarkGreen
-$navbar-inverse-toggle-icon-bar-bg:         $seedsWhiteGreen
-$navbar-inverse-toggle-border-color:        $seedsWhiteGreen
-
-
-$dropdown-bg:                    rgba($seedsTeal, 0.7)
-$dropdown-border:                rgba(0,0,0,.15)
-$dropdown-fallback-border:       #ccc
-$dropdown-divider-bg:            #e5e5e5
-
-$dropdown-link-color:            $seedsWhiteGreen
-$dropdown-link-hover-color:      lighten($seedsTeal,  25%)
-$dropdown-link-hover-bg:         darken($seedsTeal,   15%)
-
-$dropdown-link-active-color:     lighten($seedsTeal,  25%)
-$dropdown-link-active-bg:        darken($seedsTeal,   15%)
-
-
-$border-radius-base:  0
-$border-radius-large: 0
-$border-radius-small: 0
-
-$brand-primary: $seedsGreen
+$navbar-height: 70px
 
 @import "../bower_components/bootstrap-sass/lib/bootstrap"
-@import "../bower_components/sass-mediaqueries/media-queries"
 @import "../bower_components/bourbon/dist/bourbon"
 
-
 body
-	+min-screen($screen-sm)
-		background: url('img/cactus-vanishing-distance.png')
-		background-repeat: no-repeat
-		background-position: right bottom
-		background-attachment: fixed
+	font-weight: 300
+
+/* Layout Classes */
+.site-inner, .site-header
+	@extend .container
+
+.content-sidebar-wrap
+	@extend .row
+
+	.content-sidebar &, .sidebar-content &
+		.content
+			@extend .col-md-9
+		.sidebar
+			@extend .col-md-3
+
+	.sidebar-content &
+		.content
+			@extend .col-md-push-3
+		.sidebar
+			@extend .col-md-pull-9
 
 
-h4, h5, h6
-	font-weight: 700
+	.content-sidebar-sidebar &, .sidebar-sidebar-content &, .sidebar-content-sidebar &
+		.content
+			@extend .col-md-6
+		.sidebar
+			@extend .col-md-3
 
+	.sidebar-sidebar-content &
+		.content
+			@extend .col-md-push-6
+		.sidebar
+			@extend .col-md-pull-6
+
+	.sidebar-content-sidebar &
+		.content
+			@extend .col-md-push-3
+		.sidebar-primary
+			@extend .col-md-pull-6
+
+	.full-width-content &
+		.content
+			@extend .col-md-12
+
+/* Anchor type */
 a
 	+transition(color 0.3s ease-out)
 	&:hover
 		text-decoration: none
 
-.navbar-brand
-	text-indent: -9999px
-	background: url('img/seeds-logo-white.png')
-	background-size: 100% auto
-	background-repeat: no-repeat
-	background-position: center
-	padding-left: 50px
-	padding-right: 50px
-	margin-right: 20px
-	+max-screen($screen-xs-max)
-		position: absolute
-		width: 200px
-		left: 50%
-		margin-left: -100px
-
-nav.main-menu
-	background-color: $seedsGreen
-	background-image: url('img/nav-bg.jpg')
-	background-position: center
-	border: none
+h1, h2, h3, h4, h5, h6
 	a
-		+transition(color, background 0.3s ease-out)
+		color: $cPradaBlack
+		&:hover
+			text-decoration: none
 
-// For Menu on Hover
-ul.nav li.dropdown:hover > ul.dropdown-menu
+/* Meta */
+.entry-meta
+	@extend .small
+
+.site-title
+	font-size: 1.7em
+	margin-bottom: 0.25em
+
+.site-description
+	@extend .small
+	margin-top: 0
+	font-weight: 300
+
+/* Menus */
+.nav-primary, .nav-secondary
+	@extend .navbar
+	border-radius: 0
+
+	.wrap
+		@extend .container
+
+		li
+			@extend .small
+			a
+				font-weight: 400
+
+.nav-primary
+	margin-bottom: 0
+
+.nav-secondary
+	@extend .navbar-inverse
+
+.genesis-nav-menu
+	@extend .nav
+	@extend .navbar-nav
+	margin-left: -12px
+
+.menu-item-has-children
+	@extend .dropdown
+
+.sub-menu
+	@extend .dropdown-menu
+
+// For menu on hover
+ul.nav > li.menu-item-has-children:hover > ul.sub-menu
 	display: block
 
-.dropdown-menu
+.sub-menu
 	margin-top: -1px !important
 	> li > a
 		padding: 1em
 
-// Sticky Footer Code
-$footerHeight: 300px
+	
+/* Image Alignment Classes */
+.aligncenter img
+	display: block
+	margin: 0 auto
 
-+min-screen($screen-md)
-	*
-		margin: 0
+.alignnone
+	display: inline-block
 
-	html, body
-		height: 100%
+.alignleft
+	float: left
+	text-align: left
 
-	.page-wrap
-		min-height: 100%
-		&:after
-			margin-bottom: -$footerHeight
-			display: block
+.alignleft, img.alignleft, .wp-caption.alignleft
+	margin: 0 24px 24px 0
 
-	.site-footer, .page-wrap:after
-		height: $footerHeight
+.alignright
+	float: right
+	text-align: right
 
-// Footer Styling
-footer.site-footer
-	background-color: $seedsPurple
-	background-image: url('img/footer-bg.jpg')
-	background-repeat: no-repeat
-	background-size: cover
-	background-position: 0% 13%
-	border-top: 10px solid darken($seedsPurple, 15%)
-	h3
-		color: lighten($seedsPurple, 22%)
-		border-bottom: 3px solid rgba(white, 0.3)
-		padding-bottom: 0.25em
-	a
-		color: darken($seedsPurple, 15%)
-	&, p
-		color: lighten($seedsPurple, 30%)
+.alignright, img.alignright, .wp-caption.alignright
+	margin: 0 0 24px 24px
 
-// WP Styling
-#searchsubmit
-	@extend .btn
-	@extend .btn-primary
+.alignleft, .alignnone, .alignright
+	max-width: 100%
 
-// For Team Member CPT
-.single-team-member, .post-type-archive-team-member
-	h4.official-title
-		font-family: $font-family-sans-serif
-		color: lighten(grayscale($seedsGreen), 10%)
-		font-weight: 400
-		font-size: 1.1em
-		border-bottom: 3px solid lighten(grayscale($seedsGreen), 40%)
-		padding-bottom: 0.5em
+img.centered, .aligncenter
+	display: block
+	margin: 0 auto 24px
 
-	.member-pic
-		border: 4px solid rgba(darken($seedsGreen, 30%), 0.15)
+img.alignnone, .alignnone
+	margin-bottom: 12px
 
-	.member-bio
-		padding-top: 1em
-		padding-bottom: 1em
-		background: #FCFCFC
+.wp-caption-text
+	@extend .h6
 
-	.top-papers
-		font-weight: 400
+.entry-content p.wp-caption-text
+	margin-bottom: 0
+
+
+/* Post */
+article
+	background: #FFF
+	padding: 1em 2em 1.5em 2em
+	margin: 1em 0
+
+/* Footer */
+.site-footer
+	@extend .text-center
+	background: #FFF
+	padding: 1em 0em 0.5em 0
