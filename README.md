@@ -1,9 +1,9 @@
 ![SEEDS logo](theme/img/seeds-logo-green.png)
-# SEEDS Studio
+# Awsum Studio
 
 ## About
 
-SEEDS stands for the Sustainable Energy and Environmental Decision Sciences, which houses a dozen graduate students, several undergraduate researchers, and three faculty in sustainable engineering.
+awesum studio houses houses a dozen graduate students, several undergraduate researchers, and three faculty in sustainable engineering.
 
 Team Members Post Type:
 - Official title (which might include department)
